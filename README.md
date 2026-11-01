@@ -16,6 +16,8 @@ so a validated set of scorecards always produces the same numbers and the same o
 | PDF extraction | PyMuPDF (pypdf fallback) |
 | Validation | Pydantic plus custom rules |
 
+**Live app:** [https://rfp-evaluator-cnyntumcma6sipkasykpmj.streamlit.app/](https://rfp-evaluator-cnyntumcma6sipkasykpmj.streamlit.app/)
+
 ---
 
 ## 1. Folder structure
