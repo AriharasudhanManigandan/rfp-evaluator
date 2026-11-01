@@ -1,0 +1,821 @@
+{
+  "rfp_run_id": "RFP-20261101-091113-FD9F",
+  "created_at": "2026-11-01T09:11:13+00:00",
+  "status": "COMPLETED_WITH_WARNINGS",
+  "app_version": "2.0.0",
+  "llm": {
+    "provider": "offline-demo",
+    "model": "keyword-scorer-v1",
+    "temperature": 0
+  },
+  "criteria": [
+    {
+      "criterion_id": 1,
+      "name": "Technical Capability",
+      "description": "Architecture, integrations, scalability, technical fit",
+      "weight": 30.0,
+      "max_score": 10.0,
+      "is_active": 1,
+      "configured_weight": 30.0
+    },
+    {
+      "criterion_id": 2,
+      "name": "Implementation Plan",
+      "description": "Timeline, milestones, staffing, risk plan",
+      "weight": 20.0,
+      "max_score": 10.0,
+      "is_active": 1,
+      "configured_weight": 20.0
+    },
+    {
+      "criterion_id": 3,
+      "name": "Commercial Value",
+      "description": "Pricing clarity, total cost, assumptions",
+      "weight": 20.0,
+      "max_score": 10.0,
+      "is_active": 1,
+      "configured_weight": 20.0
+    },
+    {
+      "criterion_id": 4,
+      "name": "Security & Compliance",
+      "description": "Controls, certifications, privacy, auditability",
+      "weight": 20.0,
+      "max_score": 10.0,
+      "is_active": 1,
+      "configured_weight": 20.0
+    },
+    {
+      "criterion_id": 5,
+      "name": "Support & Experience",
+      "description": "Support model, similar projects, references",
+      "weight": 10.0,
+      "max_score": 10.0,
+      "is_active": 1,
+      "configured_weight": 10.0
+    }
+  ],
+  "weights_normalized": false,
+  "formulas": {
+    "absolute_score": "SUM(score / max_score * weight)",
+    "benchmark": "highest valid score for the criterion across all suppliers",
+    "gap": "score - benchmark",
+    "relative_pct": "score / benchmark * 100 (100 if benchmark = 0)",
+    "ppi": "SUM(relative_pct * weight) / SUM(weight)",
+    "tie_break_order": [
+      "Higher Peer Performance Index (PPI)",
+      "Earlier submission date",
+      "Higher historical experience rating",
+      "Supplier name (ascending)"
+    ]
+  },
+  "tie_break_rules": [
+    "1) Higher Peer Performance Index (PPI) ranks first",
+    "2) If PPI is tied, the earlier submission date ranks first",
+    "3) If still tied, the higher historical experience rating ranks first",
+    "4) If still tied, supplier name in ascending (A-Z) order"
+  ],
+  "tie_break": {
+    "rules": [
+      "1) Higher Peer Performance Index (PPI) ranks first",
+      "2) If PPI is tied, the earlier submission date ranks first",
+      "3) If still tied, the higher historical experience rating ranks first",
+      "4) If still tied, supplier name in ascending (A-Z) order"
+    ],
+    "order": [
+      "Higher Peer Performance Index (PPI)",
+      "Earlier submission date",
+      "Higher historical experience rating",
+      "Supplier name (ascending)"
+    ],
+    "ties_found": false,
+    "decisions": [],
+    "ties_resolved": [],
+    "summary": "No PPI ties - Rule 1 decided every position."
+  },
+  "ties_resolved": [],
+  "benchmarks": [
+    {
+      "criterion_id": 1,
+      "name": "Technical Capability",
+      "benchmark_score": 10.0,
+      "max_score": 10.0,
+      "leaders": [
+        "Apex Systems",
+        "NexaWorks"
+      ],
+      "benchmark_zero": false
+    },
+    {
+      "criterion_id": 2,
+      "name": "Implementation Plan",
+      "benchmark_score": 7.0,
+      "max_score": 10.0,
+      "leaders": [
+        "Apex Systems"
+      ],
+      "benchmark_zero": false
+    },
+    {
+      "criterion_id": 3,
+      "name": "Commercial Value",
+      "benchmark_score": 8.5,
+      "max_score": 10.0,
+      "leaders": [
+        "NexaWorks"
+      ],
+      "benchmark_zero": false
+    },
+    {
+      "criterion_id": 4,
+      "name": "Security & Compliance",
+      "benchmark_score": 10.0,
+      "max_score": 10.0,
+      "leaders": [
+        "Apex Systems"
+      ],
+      "benchmark_zero": false
+    },
+    {
+      "criterion_id": 5,
+      "name": "Support & Experience",
+      "benchmark_score": 9.2,
+      "max_score": 10.0,
+      "leaders": [
+        "Orbit Digital"
+      ],
+      "benchmark_zero": false
+    }
+  ],
+  "leaderboard": [
+    {
+      "rank": 1,
+      "supplier_name": "Apex Systems",
+      "absolute_score": 82.8,
+      "ppi": 91.688,
+      "submission_date": "2026-10-12",
+      "experience_rating": 8.5
+    },
+    {
+      "rank": 2,
+      "supplier_name": "NexaWorks",
+      "absolute_score": 64.0,
+      "ppi": 67.0,
+      "submission_date": "2026-10-10",
+      "experience_rating": 8.0
+    },
+    {
+      "rank": 3,
+      "supplier_name": "Orbit Digital",
+      "absolute_score": 48.3,
+      "ppi": 56.1084,
+      "submission_date": "2026-10-11",
+      "experience_rating": 9.0
+    },
+    {
+      "rank": 4,
+      "supplier_name": "BrightPath Tech",
+      "absolute_score": 40.0,
+      "ppi": 47.2258,
+      "submission_date": "2026-10-09",
+      "experience_rating": 5.0
+    }
+  ],
+  "suppliers": [
+    {
+      "supplier_name": "Apex Systems",
+      "submission_date": "2026-10-12",
+      "experience_rating": 8.5,
+      "source_file": "apex_systems_rfp.pdf",
+      "validation_warnings": [],
+      "llm_output_valid_json": true,
+      "llm_call": {
+        "attempts": 1,
+        "repaired": false,
+        "elapsed_s": 0.01,
+        "raw_reply_chars": 1484
+      },
+      "llm_raw_response": "{\"supplier_name\": \"Apex Systems\", \"criteria\": [{\"criterion_id\": 1, \"score\": 10.0, \"max_score\": 10.0, \"justification\": \"Offline demo scorer: 19 of 20 indicator terms found (architecture, microservice, api, integration).\", \"evidence\": \"proposes a cloud-native claims platform built on a microservice architecture, designed for regulated insurers\"}, {\"criterion_id\": 2, \"score\": 7.0, \"max_score\": 10.0, \"justification\": \"Offline demo scorer: 8 of 20 indicator terms found (milestone, phase, week, timeline).\", \"evidence\": \"sandbox environment is available from week 4 so that Meridian's teams can test integrations early.\"}, {\"criterion_id\": 3, \"score\": 7.0, \"max_score\": 10.0, \"justification\": \"Offline demo scorer: 8 of 20 indicator terms found (price, pricing, usd, fixed price).\", \"evidence\": \"integrating with its policy administration system, payment gateway and document archive.\"}, {\"criterion_id\": 4, \"score\": 10.0, \"max_score\": 10.0, \"justification\": \"Offline demo scorer: 18 of 20 indicator terms found (iso 27001, soc 2, encrypt, aes-256).\", \"evidence\": \"normal volume, and strict auditability of every automated decision.\"}, {\"criterion_id\": 5, \"score\": 4.8, \"max_score\": 10.0, \"justification\": \"Offline demo scorer: 5 of 20 indicator terms found (24x7, reference, response time, years).\", \"evidence\": \"Year 1 support (business hours)\"}], \"risks\": [], \"overall_summary\": \"Generated by the offline keyword scorer, not an LLM. Use a real provider for production evaluations.\"}",
+      "source_document": {
+        "file_name": "apex_systems_rfp.pdf",
+        "pages": 2,
+        "chars": 3715,
+        "sha256": "80dd3ce1bff6a4219a5f22f64ad99af37fe448b0622cfc58396f7546f496a626",
+        "extractor": "pypdf",
+        "truncated": false
+      },
+      "absolute_score": 82.8,
+      "ppi": 91.688,
+      "ppi_sort_value": 91.688,
+      "criteria_analysis": [
+        {
+          "criterion_id": 1,
+          "name": "Technical Capability",
+          "weight": 30.0,
+          "max_score": 10.0,
+          "score": 10.0,
+          "valid": true,
+          "imputed": false,
+          "evidence_missing": false,
+          "benchmark": 10.0,
+          "gap": 0.0,
+          "relative_pct": 100.0,
+          "is_benchmark_leader": true,
+          "weighted_contribution": 30.0,
+          "justification": "Offline demo scorer: 19 of 20 indicator terms found (architecture, microservice, api, integration).",
+          "evidence": "proposes a cloud-native claims platform built on a microservice architecture, designed for regulated insurers"
+        },
+        {
+          "criterion_id": 2,
+          "name": "Implementation Plan",
+          "weight": 20.0,
+          "max_score": 10.0,
+          "score": 7.0,
+          "valid": true,
+          "imputed": false,
+          "evidence_missing": false,
+          "benchmark": 7.0,
+          "gap": 0.0,
+          "relative_pct": 100.0,
+          "is_benchmark_leader": true,
+          "weighted_contribution": 14.0,
+          "justification": "Offline demo scorer: 8 of 20 indicator terms found (milestone, phase, week, timeline).",
+          "evidence": "sandbox environment is available from week 4 so that Meridian's teams can test integrations early."
+        },
+        {
+          "criterion_id": 3,
+          "name": "Commercial Value",
+          "weight": 20.0,
+          "max_score": 10.0,
+          "score": 7.0,
+          "valid": true,
+          "imputed": false,
+          "evidence_missing": false,
+          "benchmark": 8.5,
+          "gap": -1.5,
+          "relative_pct": 82.3529,
+          "is_benchmark_leader": false,
+          "weighted_contribution": 14.0,
+          "justification": "Offline demo scorer: 8 of 20 indicator terms found (price, pricing, usd, fixed price).",
+          "evidence": "integrating with its policy administration system, payment gateway and document archive."
+        },
+        {
+          "criterion_id": 4,
+          "name": "Security & Compliance",
+          "weight": 20.0,
+          "max_score": 10.0,
+          "score": 10.0,
+          "valid": true,
+          "imputed": false,
+          "evidence_missing": false,
+          "benchmark": 10.0,
+          "gap": 0.0,
+          "relative_pct": 100.0,
+          "is_benchmark_leader": true,
+          "weighted_contribution": 20.0,
+          "justification": "Offline demo scorer: 18 of 20 indicator terms found (iso 27001, soc 2, encrypt, aes-256).",
+          "evidence": "normal volume, and strict auditability of every automated decision."
+        },
+        {
+          "criterion_id": 5,
+          "name": "Support & Experience",
+          "weight": 10.0,
+          "max_score": 10.0,
+          "score": 4.8,
+          "valid": true,
+          "imputed": false,
+          "evidence_missing": false,
+          "benchmark": 9.2,
+          "gap": -4.4,
+          "relative_pct": 52.1739,
+          "is_benchmark_leader": false,
+          "weighted_contribution": 4.8,
+          "justification": "Offline demo scorer: 5 of 20 indicator terms found (24x7, reference, response time, years).",
+          "evidence": "Year 1 support (business hours)"
+        }
+      ],
+      "risks": [],
+      "overall_summary": "Generated by the offline keyword scorer, not an LLM. Use a real provider for production evaluations.",
+      "final_rank": 1,
+      "tie_break_explanation": "Ranked #1 - ahead of NexaWorks: Rule 1 - higher PPI (91.69 vs 67.00)."
+    },
+    {
+      "supplier_name": "NexaWorks",
+      "submission_date": "2026-10-10",
+      "experience_rating": 8.0,
+      "source_file": "nexaworks_rfp.pdf",
+      "validation_warnings": [
+        "V2: model reported supplier name 'NEXAWORKS INC'; using 'NexaWorks'.",
+        "V7: criterion 1 (Technical Capability) score 15 is outside 0-10; clipped to 10.",
+        "V5: criterion 2 (Implementation Plan) score 'eight' is not numeric; set to 0 and excluded from the benchmark.",
+        "V9: criterion 3 (Commercial Value) has no supporting evidence quote.",
+        "V3: criteria entry #5 has unknown criterion_id 999; ignored.",
+        "V8: criterion 5 (Support & Experience) is missing from the reply; imputed 0 and excluded from the benchmark."
+      ],
+      "llm_output_valid_json": true,
+      "llm_call": {
+        "attempts": 1,
+        "repaired": false,
+        "elapsed_s": 0.0,
+        "raw_reply_chars": 1240
+      },
+      "llm_raw_response": "Sure! Here is the evaluation:\n```json\n{\"supplier_name\": \"NEXAWORKS INC\", \"criteria\": [{\"criterion_id\": 1, \"score\": 15, \"max_score\": 10.0, \"justification\": \"Offline demo scorer: 8 of 20 indicator terms found (architecture, api, integration, load test).\", \"evidence\": \"The platform uses a modular architecture with a documented REST API.\"}, {\"criterion_id\": 2, \"score\": \"eight\", \"max_score\": 10.0, \"justification\": \"Offline demo scorer: 19 of 20 indicator terms found (milestone, phase, sprint, week).\", \"evidence\": \"Implementation Plan, Timeline and Team\"}, {\"criterion_id\": 3, \"score\": 8.5, \"max_score\": 10.0, \"justification\": \"Offline demo scorer: 10 of 20 indicator terms found (price, pricing, usd, fixed price).\"}, {\"criterion_id\": 4, \"score\": 8.5, \"max_score\": 10.0, \"justification\": \"Offline demo scorer: 10 of 20 indicator terms found (iso 27001, soc 2, encrypt, aes-256).\", \"evidence\": \"Meridian's goals are shorter claim cycle times, fewer manual hand-offs and clear audit trails.\"}, {\"criterion_id\": 999, \"score\": 7, \"max_score\": 10, \"justification\": \"invented criterion\", \"evidence\": \"\"}], \"risks\": [], \"overall_summary\": \"Generated by the offline keyword scorer, not an LLM. Use a real provider for production evaluations.\"}\n```",
+      "source_document": {
+        "file_name": "nexaworks_rfp.pdf",
+        "pages": 2,
+        "chars": 3513,
+        "sha256": "ea5e78ad9397e0f873ae01155f9116269f253741248bc979bbf3c39cf880c54e",
+        "extractor": "pypdf",
+        "truncated": false
+      },
+      "absolute_score": 64.0,
+      "ppi": 67.0,
+      "ppi_sort_value": 67.0,
+      "criteria_analysis": [
+        {
+          "criterion_id": 1,
+          "name": "Technical Capability",
+          "weight": 30.0,
+          "max_score": 10.0,
+          "score": 10.0,
+          "valid": true,
+          "imputed": false,
+          "evidence_missing": false,
+          "benchmark": 10.0,
+          "gap": 0.0,
+          "relative_pct": 100.0,
+          "is_benchmark_leader": true,
+          "weighted_contribution": 30.0,
+          "justification": "Offline demo scorer: 8 of 20 indicator terms found (architecture, api, integration, load test).",
+          "evidence": "The platform uses a modular architecture with a documented REST API."
+        },
+        {
+          "criterion_id": 2,
+          "name": "Implementation Plan",
+          "weight": 20.0,
+          "max_score": 10.0,
+          "score": 0.0,
+          "valid": false,
+          "imputed": false,
+          "evidence_missing": false,
+          "benchmark": 7.0,
+          "gap": -7.0,
+          "relative_pct": 0.0,
+          "is_benchmark_leader": false,
+          "weighted_contribution": 0.0,
+          "justification": "Offline demo scorer: 19 of 20 indicator terms found (milestone, phase, sprint, week).",
+          "evidence": "Implementation Plan, Timeline and Team"
+        },
+        {
+          "criterion_id": 3,
+          "name": "Commercial Value",
+          "weight": 20.0,
+          "max_score": 10.0,
+          "score": 8.5,
+          "valid": true,
+          "imputed": false,
+          "evidence_missing": true,
+          "benchmark": 8.5,
+          "gap": 0.0,
+          "relative_pct": 100.0,
+          "is_benchmark_leader": true,
+          "weighted_contribution": 17.0,
+          "justification": "Offline demo scorer: 10 of 20 indicator terms found (price, pricing, usd, fixed price).",
+          "evidence": ""
+        },
+        {
+          "criterion_id": 4,
+          "name": "Security & Compliance",
+          "weight": 20.0,
+          "max_score": 10.0,
+          "score": 8.5,
+          "valid": true,
+          "imputed": false,
+          "evidence_missing": false,
+          "benchmark": 10.0,
+          "gap": -1.5,
+          "relative_pct": 85.0,
+          "is_benchmark_leader": false,
+          "weighted_contribution": 17.0,
+          "justification": "Offline demo scorer: 10 of 20 indicator terms found (iso 27001, soc 2, encrypt, aes-256).",
+          "evidence": "Meridian's goals are shorter claim cycle times, fewer manual hand-offs and clear audit trails."
+        },
+        {
+          "criterion_id": 5,
+          "name": "Support & Experience",
+          "weight": 10.0,
+          "max_score": 10.0,
+          "score": 0.0,
+          "valid": false,
+          "imputed": true,
+          "evidence_missing": true,
+          "benchmark": 9.2,
+          "gap": -9.2,
+          "relative_pct": 0.0,
+          "is_benchmark_leader": false,
+          "weighted_contribution": 0.0,
+          "justification": "Not evaluated - the model returned no result for this criterion (imputed 0).",
+          "evidence": ""
+        }
+      ],
+      "risks": [],
+      "overall_summary": "Generated by the offline keyword scorer, not an LLM. Use a real provider for production evaluations.",
+      "final_rank": 2,
+      "tie_break_explanation": "Ranked #2 - behind Apex Systems: Rule 1 - higher PPI (91.69 vs 67.00)."
+    },
+    {
+      "supplier_name": "Orbit Digital",
+      "submission_date": "2026-10-11",
+      "experience_rating": 9.0,
+      "source_file": "orbit_digital_rfp.pdf",
+      "validation_warnings": [],
+      "llm_output_valid_json": true,
+      "llm_call": {
+        "attempts": 1,
+        "repaired": false,
+        "elapsed_s": 0.0,
+        "raw_reply_chars": 1378
+      },
+      "llm_raw_response": "{\"supplier_name\": \"Orbit Digital\", \"criteria\": [{\"criterion_id\": 1, \"score\": 2.5, \"max_score\": 10.0, \"justification\": \"Offline demo scorer: 2 of 20 indicator terms found (integration, scalab).\", \"evidence\": \"We will deploy our scalable claims platform, configured to Meridian's processes.\"}, {\"criterion_id\": 2, \"score\": 6.2, \"max_score\": 10.0, \"justification\": \"Offline demo scorer: 7 of 20 indicator terms found (milestone, phase, timeline, project manager).\", \"evidence\": \"need for a faster, more transparent claims process and we bring a proven delivery team that has solved this\"}, {\"criterion_id\": 3, \"score\": 4.8, \"max_score\": 10.0, \"justification\": \"Offline demo scorer: 5 of 20 indicator terms found (price, pricing, usd, licen).\", \"evidence\": \"Pricing and Assumptions\"}, {\"criterion_id\": 4, \"score\": 4.8, \"max_score\": 10.0, \"justification\": \"Offline demo scorer: 5 of 20 indicator terms found (iso 27001, encrypt, gdpr, certif).\", \"evidence\": \"Security and Compliance\"}, {\"criterion_id\": 5, \"score\": 9.2, \"max_score\": 10.0, \"justification\": \"Offline demo scorer: 11 of 20 indicator terms found (sla, reference, case stud, csat).\", \"evidence\": \"Eleven years of insurance transformation\"}], \"risks\": [\"Limited detail for 'Technical Capability'.\"], \"overall_summary\": \"Generated by the offline keyword scorer, not an LLM. Use a real provider for production evaluations.\"}",
+      "source_document": {
+        "file_name": "orbit_digital_rfp.pdf",
+        "pages": 2,
+        "chars": 2292,
+        "sha256": "42c49e42848506d69f7ab04e08bc49b6772c6fa7114c701f9f2dc124c2a093c2",
+        "extractor": "pypdf",
+        "truncated": false
+      },
+      "absolute_score": 48.3,
+      "ppi": 56.1084,
+      "ppi_sort_value": 56.1084,
+      "criteria_analysis": [
+        {
+          "criterion_id": 1,
+          "name": "Technical Capability",
+          "weight": 30.0,
+          "max_score": 10.0,
+          "score": 2.5,
+          "valid": true,
+          "imputed": false,
+          "evidence_missing": false,
+          "benchmark": 10.0,
+          "gap": -7.5,
+          "relative_pct": 25.0,
+          "is_benchmark_leader": false,
+          "weighted_contribution": 7.5,
+          "justification": "Offline demo scorer: 2 of 20 indicator terms found (integration, scalab).",
+          "evidence": "We will deploy our scalable claims platform, configured to Meridian's processes."
+        },
+        {
+          "criterion_id": 2,
+          "name": "Implementation Plan",
+          "weight": 20.0,
+          "max_score": 10.0,
+          "score": 6.2,
+          "valid": true,
+          "imputed": false,
+          "evidence_missing": false,
+          "benchmark": 7.0,
+          "gap": -0.8,
+          "relative_pct": 88.5714,
+          "is_benchmark_leader": false,
+          "weighted_contribution": 12.4,
+          "justification": "Offline demo scorer: 7 of 20 indicator terms found (milestone, phase, timeline, project manager).",
+          "evidence": "need for a faster, more transparent claims process and we bring a proven delivery team that has solved this"
+        },
+        {
+          "criterion_id": 3,
+          "name": "Commercial Value",
+          "weight": 20.0,
+          "max_score": 10.0,
+          "score": 4.8,
+          "valid": true,
+          "imputed": false,
+          "evidence_missing": false,
+          "benchmark": 8.5,
+          "gap": -3.7,
+          "relative_pct": 56.4706,
+          "is_benchmark_leader": false,
+          "weighted_contribution": 9.6,
+          "justification": "Offline demo scorer: 5 of 20 indicator terms found (price, pricing, usd, licen).",
+          "evidence": "Pricing and Assumptions"
+        },
+        {
+          "criterion_id": 4,
+          "name": "Security & Compliance",
+          "weight": 20.0,
+          "max_score": 10.0,
+          "score": 4.8,
+          "valid": true,
+          "imputed": false,
+          "evidence_missing": false,
+          "benchmark": 10.0,
+          "gap": -5.2,
+          "relative_pct": 48.0,
+          "is_benchmark_leader": false,
+          "weighted_contribution": 9.6,
+          "justification": "Offline demo scorer: 5 of 20 indicator terms found (iso 27001, encrypt, gdpr, certif).",
+          "evidence": "Security and Compliance"
+        },
+        {
+          "criterion_id": 5,
+          "name": "Support & Experience",
+          "weight": 10.0,
+          "max_score": 10.0,
+          "score": 9.2,
+          "valid": true,
+          "imputed": false,
+          "evidence_missing": false,
+          "benchmark": 9.2,
+          "gap": 0.0,
+          "relative_pct": 100.0,
+          "is_benchmark_leader": true,
+          "weighted_contribution": 9.2,
+          "justification": "Offline demo scorer: 11 of 20 indicator terms found (sla, reference, case stud, csat).",
+          "evidence": "Eleven years of insurance transformation"
+        }
+      ],
+      "risks": [
+        "Limited detail for 'Technical Capability'."
+      ],
+      "overall_summary": "Generated by the offline keyword scorer, not an LLM. Use a real provider for production evaluations.",
+      "final_rank": 3,
+      "tie_break_explanation": "Ranked #3 - behind NexaWorks: Rule 1 - higher PPI (67.00 vs 56.11)."
+    },
+    {
+      "supplier_name": "BrightPath Tech",
+      "submission_date": "2026-10-09",
+      "experience_rating": 5.0,
+      "source_file": "brightpath_tech_rfp.pdf",
+      "validation_warnings": [],
+      "llm_output_valid_json": true,
+      "llm_call": {
+        "attempts": 1,
+        "repaired": false,
+        "elapsed_s": 0.0,
+        "raw_reply_chars": 1406
+      },
+      "llm_raw_response": "{\"supplier_name\": \"BrightPath Tech\", \"criteria\": [{\"criterion_id\": 1, \"score\": 2.5, \"max_score\": 10.0, \"justification\": \"Offline demo scorer: 2 of 20 indicator terms found (api, integration).\", \"evidence\": \"We will build a modern web application using standard technologies and open APIs.\"}, {\"criterion_id\": 2, \"score\": 6.2, \"max_score\": 10.0, \"justification\": \"Offline demo scorer: 7 of 20 indicator terms found (phase, week, timeline, project manager).\", \"evidence\": \"Implementation Approach, Timeline and Team\"}, {\"criterion_id\": 3, \"score\": 4.8, \"max_score\": 10.0, \"justification\": \"Offline demo scorer: 5 of 20 indicator terms found (price, pricing, usd, licen).\", \"evidence\": \"system in just five months at the lowest price in this tender.\"}, {\"criterion_id\": 4, \"score\": 4.0, \"max_score\": 10.0, \"justification\": \"Offline demo scorer: 4 of 20 indicator terms found (iso 27001, encrypt, certif, compliance).\", \"evidence\": \"Security and Compliance\"}, {\"criterion_id\": 5, \"score\": 2.5, \"max_score\": 10.0, \"justification\": \"Offline demo scorer: 2 of 20 indicator terms found (reference, support).\", \"evidence\": \"Year 1 support\"}], \"risks\": [\"Limited detail for 'Technical Capability'.\", \"Limited detail for 'Security & Compliance'.\", \"Limited detail for 'Support & Experience'.\"], \"overall_summary\": \"Generated by the offline keyword scorer, not an LLM. Use a real provider for production evaluations.\"}",
+      "source_document": {
+        "file_name": "brightpath_tech_rfp.pdf",
+        "pages": 2,
+        "chars": 1891,
+        "sha256": "a818d8faf7716b84814ae6f39207e946b459c2078edec302e53e7c83d103b244",
+        "extractor": "pypdf",
+        "truncated": false
+      },
+      "absolute_score": 40.0,
+      "ppi": 47.2258,
+      "ppi_sort_value": 47.2258,
+      "criteria_analysis": [
+        {
+          "criterion_id": 1,
+          "name": "Technical Capability",
+          "weight": 30.0,
+          "max_score": 10.0,
+          "score": 2.5,
+          "valid": true,
+          "imputed": false,
+          "evidence_missing": false,
+          "benchmark": 10.0,
+          "gap": -7.5,
+          "relative_pct": 25.0,
+          "is_benchmark_leader": false,
+          "weighted_contribution": 7.5,
+          "justification": "Offline demo scorer: 2 of 20 indicator terms found (api, integration).",
+          "evidence": "We will build a modern web application using standard technologies and open APIs."
+        },
+        {
+          "criterion_id": 2,
+          "name": "Implementation Plan",
+          "weight": 20.0,
+          "max_score": 10.0,
+          "score": 6.2,
+          "valid": true,
+          "imputed": false,
+          "evidence_missing": false,
+          "benchmark": 7.0,
+          "gap": -0.8,
+          "relative_pct": 88.5714,
+          "is_benchmark_leader": false,
+          "weighted_contribution": 12.4,
+          "justification": "Offline demo scorer: 7 of 20 indicator terms found (phase, week, timeline, project manager).",
+          "evidence": "Implementation Approach, Timeline and Team"
+        },
+        {
+          "criterion_id": 3,
+          "name": "Commercial Value",
+          "weight": 20.0,
+          "max_score": 10.0,
+          "score": 4.8,
+          "valid": true,
+          "imputed": false,
+          "evidence_missing": false,
+          "benchmark": 8.5,
+          "gap": -3.7,
+          "relative_pct": 56.4706,
+          "is_benchmark_leader": false,
+          "weighted_contribution": 9.6,
+          "justification": "Offline demo scorer: 5 of 20 indicator terms found (price, pricing, usd, licen).",
+          "evidence": "system in just five months at the lowest price in this tender."
+        },
+        {
+          "criterion_id": 4,
+          "name": "Security & Compliance",
+          "weight": 20.0,
+          "max_score": 10.0,
+          "score": 4.0,
+          "valid": true,
+          "imputed": false,
+          "evidence_missing": false,
+          "benchmark": 10.0,
+          "gap": -6.0,
+          "relative_pct": 40.0,
+          "is_benchmark_leader": false,
+          "weighted_contribution": 8.0,
+          "justification": "Offline demo scorer: 4 of 20 indicator terms found (iso 27001, encrypt, certif, compliance).",
+          "evidence": "Security and Compliance"
+        },
+        {
+          "criterion_id": 5,
+          "name": "Support & Experience",
+          "weight": 10.0,
+          "max_score": 10.0,
+          "score": 2.5,
+          "valid": true,
+          "imputed": false,
+          "evidence_missing": false,
+          "benchmark": 9.2,
+          "gap": -6.7,
+          "relative_pct": 27.1739,
+          "is_benchmark_leader": false,
+          "weighted_contribution": 2.5,
+          "justification": "Offline demo scorer: 2 of 20 indicator terms found (reference, support).",
+          "evidence": "Year 1 support"
+        }
+      ],
+      "risks": [
+        "Limited detail for 'Technical Capability'.",
+        "Limited detail for 'Security & Compliance'.",
+        "Limited detail for 'Support & Experience'."
+      ],
+      "overall_summary": "Generated by the offline keyword scorer, not an LLM. Use a real provider for production evaluations.",
+      "final_rank": 4,
+      "tie_break_explanation": "Ranked #4 - behind Orbit Digital: Rule 1 - higher PPI (56.11 vs 47.23)."
+    }
+  ],
+  "warnings": [
+    "NexaWorks: V2: model reported supplier name 'NEXAWORKS INC'; using 'NexaWorks'.",
+    "NexaWorks: V7: criterion 1 (Technical Capability) score 15 is outside 0-10; clipped to 10.",
+    "NexaWorks: V5: criterion 2 (Implementation Plan) score 'eight' is not numeric; set to 0 and excluded from the benchmark.",
+    "NexaWorks: V9: criterion 3 (Commercial Value) has no supporting evidence quote.",
+    "NexaWorks: V3: criteria entry #5 has unknown criterion_id 999; ignored.",
+    "NexaWorks: V8: criterion 5 (Support & Experience) is missing from the reply; imputed 0 and excluded from the benchmark."
+  ],
+  "trace": [
+    {
+      "step": "2 Input",
+      "tool": "document.extract_text",
+      "supplier": "Apex Systems",
+      "status": "ok",
+      "detail": "2 page(s), 3,715 chars via pypdf",
+      "seconds": 0.083,
+      "at": "2026-11-01T09:11:13+00:00"
+    },
+    {
+      "step": "2 Input",
+      "tool": "document.extract_text",
+      "supplier": "BrightPath Tech",
+      "status": "ok",
+      "detail": "2 page(s), 1,891 chars via pypdf",
+      "seconds": 0.006,
+      "at": "2026-11-01T09:11:13+00:00"
+    },
+    {
+      "step": "2 Input",
+      "tool": "document.extract_text",
+      "supplier": "NexaWorks",
+      "status": "ok",
+      "detail": "2 page(s), 3,513 chars via pypdf",
+      "seconds": 0.012,
+      "at": "2026-11-01T09:11:13+00:00"
+    },
+    {
+      "step": "2 Input",
+      "tool": "document.extract_text",
+      "supplier": "Orbit Digital",
+      "status": "ok",
+      "detail": "2 page(s), 2,292 chars via pypdf",
+      "seconds": 0.012,
+      "at": "2026-11-01T09:11:13+00:00"
+    },
+    {
+      "step": "3 Batch",
+      "tool": "db.create_run",
+      "supplier": null,
+      "status": "ok",
+      "detail": "RFP-20261101-091113-FD9F: 4 supplier entries",
+      "seconds": null,
+      "at": "2026-11-01T09:11:13+00:00"
+    },
+    {
+      "step": "4 Evaluate",
+      "tool": "criteria.load",
+      "supplier": null,
+      "status": "ok",
+      "detail": "5 active criteria: Technical Capability 30%, Implementation Plan 20%, Commercial Value 20%, Security & Compliance 20%, Support & Experience 10%",
+      "seconds": 0.0,
+      "at": "2026-11-01T09:11:13+00:00"
+    },
+    {
+      "step": "4 Evaluate",
+      "tool": "agent.evaluate",
+      "supplier": "Apex Systems",
+      "status": "ok",
+      "detail": "1 call(s), 0.01s",
+      "seconds": 0.009,
+      "at": "2026-11-01T09:11:13+00:00"
+    },
+    {
+      "step": "5 Validate",
+      "tool": "validation.validate_scorecard",
+      "supplier": "Apex Systems",
+      "status": "ok",
+      "detail": "0 warning(s)",
+      "seconds": 0.001,
+      "at": "2026-11-01T09:11:13+00:00"
+    },
+    {
+      "step": "4 Evaluate",
+      "tool": "agent.evaluate",
+      "supplier": "BrightPath Tech",
+      "status": "ok",
+      "detail": "1 call(s), 0.0s",
+      "seconds": 0.003,
+      "at": "2026-11-01T09:11:13+00:00"
+    },
+    {
+      "step": "5 Validate",
+      "tool": "validation.validate_scorecard",
+      "supplier": "BrightPath Tech",
+      "status": "ok",
+      "detail": "0 warning(s)",
+      "seconds": 0.001,
+      "at": "2026-11-01T09:11:13+00:00"
+    },
+    {
+      "step": "4 Evaluate",
+      "tool": "agent.evaluate",
+      "supplier": "NexaWorks",
+      "status": "ok",
+      "detail": "1 call(s), 0.0s",
+      "seconds": 0.005,
+      "at": "2026-11-01T09:11:13+00:00"
+    },
+    {
+      "step": "5 Validate",
+      "tool": "validation.validate_scorecard",
+      "supplier": "NexaWorks",
+      "status": "ok",
+      "detail": "6 warning(s)",
+      "seconds": 0.001,
+      "at": "2026-11-01T09:11:13+00:00"
+    },
+    {
+      "step": "4 Evaluate",
+      "tool": "agent.evaluate",
+      "supplier": "Orbit Digital",
+      "status": "ok",
+      "detail": "1 call(s), 0.0s",
+      "seconds": 0.003,
+      "at": "2026-11-01T09:11:13+00:00"
+    },
+    {
+      "step": "5 Validate",
+      "tool": "validation.validate_scorecard",
+      "supplier": "Orbit Digital",
+      "status": "ok",
+      "detail": "0 warning(s)",
+      "seconds": 0.001,
+      "at": "2026-11-01T09:11:13+00:00"
+    },
+    {
+      "step": "6-8 Score/Benchmark/Rank",
+      "tool": "ranking.rank_suppliers",
+      "supplier": null,
+      "status": "ok",
+      "detail": "4 supplier(s) ranked; No PPI ties - Rule 1 decided every position.",
+      "seconds": 0.0,
+      "at": "2026-11-01T09:11:13+00:00"
+    },
+    {
+      "step": "9 Persist",
+      "tool": "db.save_run_results",
+      "supplier": null,
+      "status": "ok",
+      "detail": "saved 4 supplier results and the run JSON under RFP-20261101-091113-FD9F",
+      "seconds": null,
+      "at": "2026-11-01T09:11:13+00:00"
+    }
+  ]
+}

@@ -1,0 +1,386 @@
+{
+  "rfp_run_id": "RFP-20261031-225313-45A3",
+  "created_at": "2026-10-31T22:53:13+00:00",
+  "status": "COMPLETED_WITH_WARNINGS",
+  "llm": {
+    "provider": "openai",
+    "model": "gpt-4o-mini"
+  },
+  "criteria": [
+    {
+      "criterion_id": 1,
+      "name": "Technical Capability",
+      "description": "Architecture, integrations, scalability, technical fit",
+      "weight": 30.0,
+      "max_score": 10.0,
+      "is_active": 1,
+      "configured_weight": 30.0
+    },
+    {
+      "criterion_id": 2,
+      "name": "Implementation Plan",
+      "description": "Timeline, milestones, staffing, risk plan",
+      "weight": 20.0,
+      "max_score": 10.0,
+      "is_active": 1,
+      "configured_weight": 20.0
+    },
+    {
+      "criterion_id": 3,
+      "name": "Commercial Value",
+      "description": "Pricing clarity, total cost, assumptions",
+      "weight": 20.0,
+      "max_score": 10.0,
+      "is_active": 1,
+      "configured_weight": 20.0
+    },
+    {
+      "criterion_id": 4,
+      "name": "Security & Compliance",
+      "description": "Controls, certifications, privacy, auditability",
+      "weight": 20.0,
+      "max_score": 10.0,
+      "is_active": 1,
+      "configured_weight": 20.0
+    },
+    {
+      "criterion_id": 5,
+      "name": "Support & Experience",
+      "description": "Support model, similar projects, references",
+      "weight": 10.0,
+      "max_score": 10.0,
+      "is_active": 1,
+      "configured_weight": 10.0
+    }
+  ],
+  "weights_normalized": false,
+  "benchmarks": {
+    "Technical Capability": 9.0,
+    "Implementation Plan": 8.0,
+    "Commercial Value": 9.0,
+    "Security & Compliance": 9.0,
+    "Support & Experience": 8.0
+  },
+  "tie_break": {
+    "order": [
+      "Higher Peer Performance Index (PPI)",
+      "Earlier submission date",
+      "Higher historical experience rating",
+      "Supplier name (ascending)"
+    ],
+    "ties_found": false,
+    "decisions": [],
+    "summary": "No PPI ties - the ranking is decided by PPI alone."
+  },
+  "failed_suppliers": [],
+  "warnings": [
+    "[Apex Systems Rfp Response] Model reported supplier name 'Apex Systems'; using 'Apex Systems Rfp Response'.",
+    "[Brightpath Tech Rfp Response] Model reported supplier name 'Brightpath Tech'; using 'Brightpath Tech Rfp Response'."
+  ],
+  "suppliers": [
+    {
+      "supplier_name": "Apex Systems Rfp Response",
+      "submission_date": "2026-11-01",
+      "experience_rating": 5.0,
+      "source_file": "Apex_Systems_RFP_Response.pdf",
+      "document_pages": 2,
+      "warnings": [
+        "Model reported supplier name 'Apex Systems'; using 'Apex Systems Rfp Response'."
+      ],
+      "llm_raw_response": "{\n  \"supplier_name\": \"Apex Systems\",\n  \"criteria\": [\n    {\n      \"criterion_id\": 1,\n      \"score\": 9.0,\n      \"max_score\": 10.0,\n      \"justification\": \"Apex Systems demonstrates strong technical capability with a modular architecture and scalability. Their system supports 2,000 concurrent conversations and provides various integrations.\",\n      \"evidence\": \"multi-agent platform built on a modular, event-driven architecture, tested to 2,000 concurrent conversations\"\n    },\n    {\n      \"criterion_id\": 2,\n      \"score\": 8.0,\n      \"max_score\": 10.0,\n      \"justification\": \"The implementation plan outlines a clear 20-week timeline with milestones, staffing, and a risk plan. Details on steering calls and demos enhance the proposal.\",\n      \"evidence\": \"Delivery follows a phased plan over 20 weeks: discovery, build, pilot on one business line, and staged rollout.\"\n    },\n    {\n      \"criterion_id\": 3,\n      \"score\": 7.0,\n      \"max_score\": 10.0,\n      \"justification\": \"Pricing is provided with a fixed fee for implementation and annual costs, but the proposal lacks details on the total cost implications beyond Year 1.\",\n      \"evidence\": \"Total Year-1 cost 1,065,000\"\n    },\n    {\n      \"criterion_id\": 4,\n      \"score\": 9.0,\n      \"max_score\": 10.0,\n      \"justification\": \"The proposal includes comprehensive details on security measures and compliance certifications, enhancing trust in their approach.\",\n      \"evidence\": \"Apex Systems holds ISO 27001 and SOC 2 Type II certifications\"\n    },\n    {\n      \"criterion_id\": 5,\n      \"score\": 8.0,\n      \"max_score\": 10.0,\n      \"justification\": \"Apex Systems presents a solid support model with 24x7 service and relevant experience from similar projects, backed by references.\",\n      \"evidence\": \"Support is 24x7 for severity-1 issues with a 30-minute response SLA\"\n    }\n  ],\n  \"risks\": [\"Lack of detailed cost breakdown beyond Year 1.\"],\n  \"overall_summary\": \"Apex Systems' proposal demonstrates strong technical capabilities, a well-structured implementation plan, and robust security measures. However, clarity on total costs beyond the first year could improve their overall offering.\"\n}",
+      "absolute_score": 83.0,
+      "ppi": 95.5556,
+      "criteria_analysis": [
+        {
+          "criterion_id": 1,
+          "name": "Technical Capability",
+          "weight": 30.0,
+          "max_score": 10.0,
+          "score": 9.0,
+          "valid": true,
+          "benchmark": 9.0,
+          "gap": 0.0,
+          "relative_pct": 100.0,
+          "weighted_contribution": 27.0,
+          "justification": "Apex Systems demonstrates strong technical capability with a modular architecture and scalability. Their system supports 2,000 concurrent conversations and provides various integrations.",
+          "evidence": "multi-agent platform built on a modular, event-driven architecture, tested to 2,000 concurrent conversations"
+        },
+        {
+          "criterion_id": 2,
+          "name": "Implementation Plan",
+          "weight": 20.0,
+          "max_score": 10.0,
+          "score": 8.0,
+          "valid": true,
+          "benchmark": 8.0,
+          "gap": 0.0,
+          "relative_pct": 100.0,
+          "weighted_contribution": 16.0,
+          "justification": "The implementation plan outlines a clear 20-week timeline with milestones, staffing, and a risk plan. Details on steering calls and demos enhance the proposal.",
+          "evidence": "Delivery follows a phased plan over 20 weeks: discovery, build, pilot on one business line, and staged rollout."
+        },
+        {
+          "criterion_id": 3,
+          "name": "Commercial Value",
+          "weight": 20.0,
+          "max_score": 10.0,
+          "score": 7.0,
+          "valid": true,
+          "benchmark": 9.0,
+          "gap": -2.0,
+          "relative_pct": 77.7778,
+          "weighted_contribution": 14.0,
+          "justification": "Pricing is provided with a fixed fee for implementation and annual costs, but the proposal lacks details on the total cost implications beyond Year 1.",
+          "evidence": "Total Year-1 cost 1,065,000"
+        },
+        {
+          "criterion_id": 4,
+          "name": "Security & Compliance",
+          "weight": 20.0,
+          "max_score": 10.0,
+          "score": 9.0,
+          "valid": true,
+          "benchmark": 9.0,
+          "gap": 0.0,
+          "relative_pct": 100.0,
+          "weighted_contribution": 18.0,
+          "justification": "The proposal includes comprehensive details on security measures and compliance certifications, enhancing trust in their approach.",
+          "evidence": "Apex Systems holds ISO 27001 and SOC 2 Type II certifications"
+        },
+        {
+          "criterion_id": 5,
+          "name": "Support & Experience",
+          "weight": 10.0,
+          "max_score": 10.0,
+          "score": 8.0,
+          "valid": true,
+          "benchmark": 8.0,
+          "gap": 0.0,
+          "relative_pct": 100.0,
+          "weighted_contribution": 8.0,
+          "justification": "Apex Systems presents a solid support model with 24x7 service and relevant experience from similar projects, backed by references.",
+          "evidence": "Support is 24x7 for severity-1 issues with a 30-minute response SLA"
+        }
+      ],
+      "risks": [
+        "Lack of detailed cost breakdown beyond Year 1."
+      ],
+      "overall_summary": "Apex Systems' proposal demonstrates strong technical capabilities, a well-structured implementation plan, and robust security measures. However, clarity on total costs beyond the first year could improve their overall offering.",
+      "final_rank": 1
+    },
+    {
+      "supplier_name": "Brightpath Tech Rfp Response",
+      "submission_date": "2026-11-01",
+      "experience_rating": 5.0,
+      "source_file": "BrightPath_Tech_RFP_Response.pdf",
+      "document_pages": 2,
+      "warnings": [
+        "Model reported supplier name 'Brightpath Tech'; using 'Brightpath Tech Rfp Response'."
+      ],
+      "llm_raw_response": "{\n  \"supplier_name\": \"Brightpath Tech\",\n  \"criteria\": [\n    {\n      \"criterion_id\": 1,\n      \"score\": 6.0,\n      \"max_score\": 10.0,\n      \"justification\": \"The proposal outlines the technical architecture but lacks extensive details on scalability and integrations.\",\n      \"evidence\": \"Integrations are limited to Zendesk and Shopify in the base scope.\"\n    },\n    {\n      \"criterion_id\": 2,\n      \"score\": 8.0,\n      \"max_score\": 10.0,\n      \"justification\": \"The implementation plan provides a clear timeline and milestones, but it mentions that testing will mostly be manual.\",\n      \"evidence\": \"A compressed 8-week delivery is planned: 2 weeks setup, 4 weeks build, 2 weeks launch.\"\n    },\n    {\n      \"criterion_id\": 3,\n      \"score\": 9.0,\n      \"max_score\": 10.0,\n      \"justification\": \"Pricing is clear and transparent, but the document notes scope changes will incur separate costs.\",\n      \"evidence\": \"BrightPath offers the lowest price in the market with simple, transparent pricing.\"\n    },\n    {\n      \"criterion_id\": 4,\n      \"score\": 6.0,\n      \"max_score\": 10.0,\n      \"justification\": \"The proposal mentions data security measures but lacks detailed compliance documentation and a commitment to certification.\",\n      \"evidence\": \"We are planning to start SOC 2 certification next year.\"\n    },\n    {\n      \"criterion_id\": 5,\n      \"score\": 5.0,\n      \"max_score\": 10.0,\n      \"justification\": \"While there is some support structure mentioned, the lack of a formal SLA and limited experience raises concerns.\",\n      \"evidence\": \"No formal SLA is offered in the base package.\"\n    }\n  ],\n  \"risks\": [\n    \"Limited experience as a young startup and only two small pilots completed.\",\n    \"No detailed compliance documentation available.\"\n  ],\n  \"overall_summary\": \"Brightpath Tech presents a solid proposal with a clear implementation plan and transparent pricing. However, concerns arise from limited integration capabilities, lacking extensive experience, and incomplete compliance documentation.\"\n}",
+      "absolute_score": 69.0,
+      "ppi": 79.5833,
+      "criteria_analysis": [
+        {
+          "criterion_id": 1,
+          "name": "Technical Capability",
+          "weight": 30.0,
+          "max_score": 10.0,
+          "score": 6.0,
+          "valid": true,
+          "benchmark": 9.0,
+          "gap": -3.0,
+          "relative_pct": 66.6667,
+          "weighted_contribution": 18.0,
+          "justification": "The proposal outlines the technical architecture but lacks extensive details on scalability and integrations.",
+          "evidence": "Integrations are limited to Zendesk and Shopify in the base scope."
+        },
+        {
+          "criterion_id": 2,
+          "name": "Implementation Plan",
+          "weight": 20.0,
+          "max_score": 10.0,
+          "score": 8.0,
+          "valid": true,
+          "benchmark": 8.0,
+          "gap": 0.0,
+          "relative_pct": 100.0,
+          "weighted_contribution": 16.0,
+          "justification": "The implementation plan provides a clear timeline and milestones, but it mentions that testing will mostly be manual.",
+          "evidence": "A compressed 8-week delivery is planned: 2 weeks setup, 4 weeks build, 2 weeks launch."
+        },
+        {
+          "criterion_id": 3,
+          "name": "Commercial Value",
+          "weight": 20.0,
+          "max_score": 10.0,
+          "score": 9.0,
+          "valid": true,
+          "benchmark": 9.0,
+          "gap": 0.0,
+          "relative_pct": 100.0,
+          "weighted_contribution": 18.0,
+          "justification": "Pricing is clear and transparent, but the document notes scope changes will incur separate costs.",
+          "evidence": "BrightPath offers the lowest price in the market with simple, transparent pricing."
+        },
+        {
+          "criterion_id": 4,
+          "name": "Security & Compliance",
+          "weight": 20.0,
+          "max_score": 10.0,
+          "score": 6.0,
+          "valid": true,
+          "benchmark": 9.0,
+          "gap": -3.0,
+          "relative_pct": 66.6667,
+          "weighted_contribution": 12.0,
+          "justification": "The proposal mentions data security measures but lacks detailed compliance documentation and a commitment to certification.",
+          "evidence": "We are planning to start SOC 2 certification next year."
+        },
+        {
+          "criterion_id": 5,
+          "name": "Support & Experience",
+          "weight": 10.0,
+          "max_score": 10.0,
+          "score": 5.0,
+          "valid": true,
+          "benchmark": 8.0,
+          "gap": -3.0,
+          "relative_pct": 62.5,
+          "weighted_contribution": 5.0,
+          "justification": "While there is some support structure mentioned, the lack of a formal SLA and limited experience raises concerns.",
+          "evidence": "No formal SLA is offered in the base package."
+        }
+      ],
+      "risks": [
+        "Limited experience as a young startup and only two small pilots completed.",
+        "No detailed compliance documentation available."
+      ],
+      "overall_summary": "Brightpath Tech presents a solid proposal with a clear implementation plan and transparent pricing. However, concerns arise from limited integration capabilities, lacking extensive experience, and incomplete compliance documentation.",
+      "final_rank": 2
+    }
+  ],
+  "leaderboard": [
+    {
+      "rank": 1,
+      "supplier_name": "Apex Systems Rfp Response",
+      "absolute_score": 83.0,
+      "ppi": 95.5556,
+      "submission_date": "2026-11-01",
+      "experience_rating": 5.0
+    },
+    {
+      "rank": 2,
+      "supplier_name": "Brightpath Tech Rfp Response",
+      "absolute_score": 69.0,
+      "ppi": 79.5833,
+      "submission_date": "2026-11-01",
+      "experience_rating": 5.0
+    }
+  ],
+  "formulas": {
+    "absolute_score": "SUM(score / max_score * weight)",
+    "benchmark": "highest valid score for the criterion across all suppliers",
+    "gap": "score - benchmark",
+    "relative_pct": "score / benchmark * 100 (100 if benchmark = 0)",
+    "ppi": "SUM(relative_pct * weight) / SUM(weight)",
+    "tie_break_order": [
+      "Higher Peer Performance Index (PPI)",
+      "Earlier submission date",
+      "Higher historical experience rating",
+      "Supplier name (ascending)"
+    ]
+  },
+  "trace": [
+    {
+      "step": 3,
+      "stage": "Batch",
+      "tool": "db.create_run",
+      "supplier": null,
+      "status": "ok",
+      "detail": "2 supplier(s)",
+      "seconds": 0.0
+    },
+    {
+      "step": 4,
+      "stage": "Evaluate",
+      "tool": "criteria.load",
+      "supplier": null,
+      "status": "ok",
+      "detail": "5 active criteria",
+      "seconds": 0.001
+    },
+    {
+      "step": 4,
+      "stage": "Evaluate",
+      "tool": "document.extract_text",
+      "supplier": "Apex Systems Rfp Response",
+      "status": "ok",
+      "detail": "2 page(s), 4,251 chars",
+      "seconds": 0.03
+    },
+    {
+      "step": 4,
+      "stage": "Evaluate",
+      "tool": "evaluation_agent.score",
+      "supplier": "Apex Systems Rfp Response",
+      "status": "ok",
+      "detail": "valid JSON after 1 attempt(s)",
+      "seconds": 5.705
+    },
+    {
+      "step": 5,
+      "stage": "Validate",
+      "tool": "validation.normalize",
+      "supplier": "Apex Systems Rfp Response",
+      "status": "ok",
+      "detail": "1 warning(s)",
+      "seconds": 0.0
+    },
+    {
+      "step": 4,
+      "stage": "Evaluate",
+      "tool": "document.extract_text",
+      "supplier": "Brightpath Tech Rfp Response",
+      "status": "ok",
+      "detail": "2 page(s), 2,852 chars",
+      "seconds": 0.02
+    },
+    {
+      "step": 4,
+      "stage": "Evaluate",
+      "tool": "evaluation_agent.score",
+      "supplier": "Brightpath Tech Rfp Response",
+      "status": "ok",
+      "detail": "valid JSON after 1 attempt(s)",
+      "seconds": 3.879
+    },
+    {
+      "step": 5,
+      "stage": "Validate",
+      "tool": "validation.normalize",
+      "supplier": "Brightpath Tech Rfp Response",
+      "status": "ok",
+      "detail": "1 warning(s)",
+      "seconds": 0.0
+    },
+    {
+      "step": 8,
+      "stage": "Rank",
+      "tool": "ranking.rank",
+      "supplier": null,
+      "status": "ok",
+      "detail": "2 supplier(s) ranked; No PPI ties - the ranking is decided by PPI alone.",
+      "seconds": 0.0
+    },
+    {
+      "step": 9,
+      "stage": "Persist",
+      "tool": "db.save_run",
+      "supplier": null,
+      "status": "ok",
+      "detail": "saved under RFP-20261031-225313-45A3",
+      "seconds": 0.0
+    }
+  ]
+}

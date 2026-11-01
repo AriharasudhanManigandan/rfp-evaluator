@@ -1,0 +1,33 @@
+[
+  {
+    "file": "apex_systems_rfp.pdf",
+    "supplier_name": "Apex Systems",
+    "submission_date": "2026-10-12",
+    "experience_rating": 8.5
+  },
+  {
+    "file": "brightpath_tech_rfp.pdf",
+    "supplier_name": "BrightPath Tech",
+    "submission_date": "2026-10-09",
+    "experience_rating": 5.0
+  },
+  {
+    "file": "nexaworks_rfp.pdf",
+    "supplier_name": "NexaWorks",
+    "submission_date": "2026-10-10",
+    "experience_rating": 8.0
+  },
+  {
+    "file": "orbit_digital_rfp.pdf",
+    "supplier_name": "Orbit Digital",
+    "submission_date": "2026-10-11",
+    "experience_rating": 9.0
+  },
+  {
+    "file": "helix_networks_rfp.pdf",
+    "supplier_name": "Helix Networks",
+    "submission_date": "2026-10-13",
+    "experience_rating": 3.0,
+    "edge_case": true
+  }
+]
